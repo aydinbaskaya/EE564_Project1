@@ -8,8 +8,10 @@ vy_init=0
 dt=0.05
 m=1.101
 for n=0,15 do
-    mi_analyze()
+    mi_analyze(1)
     mi_loadsolution()
+    mo_zoom(-40,-90,50,40) 
+    mo_savebitmap(format("ss_%1$d.bmp",n))
     mo_groupselectblock(1)
     fx=mo_blockintegral(18)
     fy=mo_blockintegral(19)-(m*9.8)
@@ -29,3 +31,5 @@ print(fx,fy)
         mi_movetranslate(dx,dy)
     end
 end
+mo_close()
+mi_close()
