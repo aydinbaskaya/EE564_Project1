@@ -1,6 +1,6 @@
 showconsole()
 mydir="./"
-open(mydir .. "deneme1.fem")
+open(mydir .. "motion2d.fem")
 mi_saveas(mydir .. "demo.fem")
 mi_seteditmode("group")
 vx_init=0
